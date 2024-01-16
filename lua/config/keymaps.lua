@@ -2,9 +2,27 @@
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
 --
+vim.opt.clipboard = 'unnamedplus'
 vim.keymap.set("i", "jk", "<ESC>", { silent = true })
 vim.keymap.set("i", "<C-n>", "<ESC>la", { silent = true, noremap = true })
 vim.keymap.set("n", "s", "\"_s", { silent = true, noremap = true })
+
+vim.keymap.set('n', '<leader>y', require('osc52').copy_operator , {expr = true})
+vim.keymap.set('n', '<leader>yy', '<leader>y_', {remap = true})
+vim.keymap.set('v', '<leader>y', require('osc52').copy_visual)
+
+vim.keymap.set({"n", "v"}, '<leader>d', "\"_d")
+
+vim.keymap.set("n", '<c-j>','<cmd>w<cr>', { silent = true, noremap = true })
+vim.keymap.set("i", '<c-j>','<Esc><cmd>w<cr>', { silent = true, noremap = true })
+
+vim.keymap.set("n", '<Enter>','o<ESC>', { silent = true})
+vim.keymap.set("n", '<C-k>','O<ESC>', { silent = true})
+vim.keymap.set('v', '//', 'y/\\V<C-R>=escape(@",\'/\\\')<CR><CR>', {silent = true, noremap = true})
+
+-- map <Enter> o<ESC>
+-- map <S-Enter> O<ESC>
+
 
 function insertCharacter()
   -- Save the current cursor position
