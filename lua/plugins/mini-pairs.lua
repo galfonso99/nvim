@@ -5,11 +5,15 @@ return {
     mappings = {
       ['('] = false,
       ['['] = false,
-      -- ['{'] = false,
+      ['{'] = false,
 
-      [')'] = { action = 'close', pair = '()', neigh_pattern = '[^\\].' },
-      [']'] = { action = 'close', pair = '[]', neigh_pattern = '[^\\].' },
-      ['}'] = { action = 'close', pair = '{}', neigh_pattern = '[^\\].' },
+      [')'] = false,
+      [']'] = false,
+      ['}'] = false,
+
+      -- [')'] = { action = 'close', pair = '()', neigh_pattern = '[^\\].' },
+      -- [']'] = { action = 'close', pair = '[]', neigh_pattern = '[^\\].' },
+      -- ['}'] = { action = 'close', pair = '{}', neigh_pattern = '[^\\].' },
 
       ['"'] = false,
       ["'"] = false,

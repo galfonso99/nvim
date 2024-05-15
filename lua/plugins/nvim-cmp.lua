@@ -1,0 +1,46 @@
+return { 
+  -- "hrsh7th/nvim-cmp",
+  -- keys = {
+  --   {
+  --     "<C-n>",
+  --     function()
+  --       if vim.snippet.jumpable(1) then
+  --         vim.schedule(function()
+  --           vim.snippet.jump(1)
+  --         end)
+  --         return
+  --       end
+  --       return "<C-n>"
+  --     end,
+  --     expr = true,
+  --     silent = true,
+  --     mode = "i",
+  --   },
+  --   {
+  --     "<C-n>",
+  --     function()
+  --       vim.schedule(function()
+  --         vim.snippet.jump(1)
+  --       end)
+  --     end,
+  --     silent = true,
+  --     mode = "s",
+  --   },
+  --   {
+  --     "<C-p>",
+  --     function()
+  --       if vim.snippet.jumpable(-1) then
+  --         vim.schedule(function()
+  --           vim.snippet.jump(-1)
+  --         end)
+  --         return
+  --       end
+  --       return "<C-p>"
+  --     end,
+  --     expr = true,
+  --     silent = true,
+  --     mode = { "i", "s" },
+  --   },
+  -- },
+}
+
