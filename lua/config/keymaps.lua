@@ -1,23 +1,23 @@
-vim.opt.clipboard = 'unnamedplus'
+vim.opt.clipboard = "unnamedplus"
 -- vim.keymap.set("i", "jk", "<ESC>", { silent = true })
 -- vim.keymap.set("i", "<C-n>", "<ESC>la", { silent = true, noremap = true })
 -- vim.keymap.set("s", "<TAB>", vim.NIL, { silent = true, noremap = true })
-vim.keymap.set("n", "s", "\"_s", { silent = true, noremap = true })
-vim.keymap.set("n", "x", "\"_x", { silent = true, noremap = true })
-vim.keymap.set("n", "c", "\"_c", { silent = true, noremap = true })
+vim.keymap.set("n", "s", '"_s', { silent = true, noremap = true })
+vim.keymap.set("n", "x", '"_x', { silent = true, noremap = true })
+vim.keymap.set("n", "c", '"_c', { silent = true, noremap = true })
 -- vim.keymap.del({"n", "i", "s"}, '<tab>')
 
-vim.keymap.set('n', '<leader>y', require('osc52').copy_operator , {expr = true})
-vim.keymap.set('n', '<leader>yy', '<leader>y_', {remap = true})
-vim.keymap.set('v', '<leader>y', require('osc52').copy_visual)
+vim.keymap.set("n", "<leader>y", require("osc52").copy_operator, { expr = true })
+vim.keymap.set("n", "<leader>yy", "<leader>y_", { remap = true })
+vim.keymap.set("v", "<leader>y", require("osc52").copy_visual)
 
-vim.keymap.set({"n", "v"}, '<leader>d', "\"_d")
+vim.keymap.set({ "n", "v" }, "<leader>d", '"_d')
 
-vim.keymap.set({"i", "v"}, '<c-j>','<Esc>', { silent = true, noremap = true })
-vim.keymap.set("n", '<c-k>','<cmd>w<cr>', { silent = true, noremap = true })
-vim.keymap.set("i", '<c-k>','<Esc><cmd>w<cr>', { silent = true, noremap = true })
-vim.keymap.set("n", 'Q','<c-v>', { silent = true, noremap = true})
-vim.keymap.set("n", '<Enter>','o<ESC>', { silent = true})
+vim.keymap.set({ "i", "v" }, "<c-j>", "<Esc>", { silent = true, noremap = true })
+vim.keymap.set("n", "<c-k>", "<cmd>w<cr>", { silent = true, noremap = true })
+vim.keymap.set("i", "<c-k>", "<Esc><cmd>w<cr>", { silent = true, noremap = true })
+vim.keymap.set("n", "Q", "<c-v>", { silent = true, noremap = true })
+vim.keymap.set("n", "<Enter>", "o<ESC>", { silent = true })
 -- vim.keymap.set('v', '//', 'y/\\V<C-R>=escape(@",\'/\\\')<CR><CR>', {silent = true, noremap = true})
 
 -- vim.keymap.set({"i"}, "<C-K>", function() require("luasnip").expand() end, {silent = true})
@@ -46,7 +46,7 @@ local function insertCharacter()
   local new_col = col + 1
   vim.api.nvim_win_set_cursor(0, { line, new_col })
 
-  -- Return to normal mode 
+  -- Return to normal mode
   vim.cmd("stopinsert")
 end
 

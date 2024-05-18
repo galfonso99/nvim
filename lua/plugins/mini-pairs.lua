@@ -3,13 +3,13 @@ return {
   version = "*",
   opts = {
     mappings = {
-      ['('] = false,
-      ['['] = false,
-      ['{'] = false,
+      ["("] = false,
+      ["["] = false,
+      ["{"] = false,
 
-      [')'] = false,
-      [']'] = false,
-      ['}'] = false,
+      [")"] = false,
+      ["]"] = false,
+      ["}"] = false,
 
       -- [')'] = { action = 'close', pair = '()', neigh_pattern = '[^\\].' },
       -- [']'] = { action = 'close', pair = '[]', neigh_pattern = '[^\\].' },
@@ -17,7 +17,7 @@ return {
 
       ['"'] = false,
       ["'"] = false,
-      ['`'] = false,
+      ["`"] = false,
     },
   },
   config = function(_, opts)
