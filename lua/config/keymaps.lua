@@ -10,6 +10,8 @@ vim.keymap.set("n", "c", '"_c', { silent = true, noremap = true })
 vim.keymap.set("n", "<leader>y", require("osc52").copy_operator, { expr = true })
 vim.keymap.set("n", "<leader>yy", "<leader>y_", { remap = true })
 vim.keymap.set("v", "<leader>y", require("osc52").copy_visual)
+vim.keymap.set("v", "<leader>p", '"_dP')
+vim.keymap.set("n", "<leader>ip", '"_diwP')
 
 vim.keymap.set({ "n", "v" }, "<leader>d", '"_d')
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
@@ -34,27 +36,27 @@ vim.keymap.set("n", "<leader>fg", "<leader>sg", { remap = true })
 -- 	end
 -- end, {silent = true})
 
-local function insertCharacter()
-  -- Save the current cursor position
-  local cursor = vim.api.nvim_win_get_cursor(0)
-  local line = cursor[1]
-  local col = cursor[2]
+-- local function insertCharacter()
+--   -- Save the current cursor position
+--   local cursor = vim.api.nvim_win_get_cursor(0)
+--   local line = cursor[1]
+--   local col = cursor[2]
+--
+--   -- Prompt for a character
+--   local character = vim.fn.nr2char(vim.fn.getchar())
+--
+--   -- Insert the custom character at the cursor position
+--   vim.api.nvim_buf_set_text(0, line - 1, col + 1, line - 1, col + 1, { character })
+--
+--   -- Move the cursor one position ahead
+--   local new_col = col + 1
+--   vim.api.nvim_win_set_cursor(0, { line, new_col })
+--
+--   -- Return to normal mode
+--   vim.cmd("stopinsert")
+-- end
 
-  -- Prompt for a character
-  local character = vim.fn.nr2char(vim.fn.getchar())
-
-  -- Insert the custom character at the cursor position
-  vim.api.nvim_buf_set_text(0, line - 1, col + 1, line - 1, col + 1, { character })
-
-  -- Move the cursor one position ahead
-  local new_col = col + 1
-  vim.api.nvim_win_set_cursor(0, { line, new_col })
-
-  -- Return to normal mode
-  vim.cmd("stopinsert")
-end
-
-vim.api.nvim_set_keymap("n", "<Leader>i", ":lua insertCharacter()<CR>", { silent = true })
+-- vim.api.nvim_set_keymap("n", "<Leader>i", ":lua insertCharacter()<CR>", { silent = true })
 --
 -- This is an alternative to the function above to fix any marks issue if it arises, currently there is no issues
 --  vim.api.nvim_call_atomic(function()
