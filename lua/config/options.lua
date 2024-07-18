@@ -11,3 +11,4 @@ vim.g.autoformat = false
 vim.o.tabstop = 4
 vim.o.shiftwidth = 4
 vim.opt.iskeyword['_'] = nil
+vim.g.zig_fmt_autosave = 0

@@ -1,10 +1,12 @@
 {
   "extras": [
-    "lazyvim.plugins.extras.coding.native_snippets",
-    "lazyvim.plugins.extras.editor.harpoon2"
+    "lazyvim.plugins.extras.editor.harpoon2",
+    "lazyvim.plugins.extras.lang.go",
+    "lazyvim.plugins.extras.lang.markdown",
+    "lazyvim.plugins.extras.lang.toml"
   ],
   "news": {
-    "NEWS.md": "4828"
+    "NEWS.md": "4964"
   },
-  "version": 3
+  "version": 4
 }
