@@ -1,12 +1,5 @@
 return {
   {
-    "folke/flash.nvim",
-    keys = {
-      { "s", vim.NIL},
-      { "S", vim.NIL},
-    },
-  },
-  {
   "ojroques/nvim-osc52",
     keys = {
     -- disable the keymap to grep files
