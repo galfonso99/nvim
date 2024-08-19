@@ -36,6 +36,7 @@ return {
     { "EdenEast/nightfox.nvim" },
     { "rebelot/kanagawa.nvim" },
     { "junegunn/seoul256.vim" },
+    -- {"shaunsingh/seoul256.nvim"},
 
   -- {
   --   "LazyVim/LazyVim",
@@ -66,6 +67,9 @@ return {
     -- OceanicNext
     -- rose-pine moon
     -- rose-pine main
+    -- duskfox
+    -- terafox
+    -- nightfox
     --
     -- zaibatsu
     -- wildcharm

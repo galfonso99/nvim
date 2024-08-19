@@ -10,13 +10,15 @@ vim.o.guicursor = "n-v-c-sm-ci-ve:block,r-cr-o:hor20,a:blinkoff800-blinkon800-Cu
 vim.g.autoformat = false
 vim.o.tabstop = 4
 vim.o.shiftwidth = 4
--- vim.opt.iskeyword['_'] = nil
+
+
 vim.o.termguicolors = true
 vim.g.zig_fmt_autosave = 0
--- vim.g.seoul256_disable_background = true
 vim.g.seoul256_background = 233
--- vim.g.deus_contrast_dark = "high"
--- vim.s.is_dark=true
--- vim.opt.background=dark
--- background=dark
 vim.opt.colorcolumn = "80"
+
+vim.g.netrw_keepdir = 0
+vim.g.netrw_windsize = 30
+vim.g.netrw_banner = 0
+vim.g.netrw_list_hide = vim.fn['netrw_gitignore#Hide']()
+vim.g.netrw_localcopydircmd = 'cp -r'
