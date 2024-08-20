@@ -16,9 +16,12 @@ vim.o.termguicolors = true
 vim.g.zig_fmt_autosave = 0
 vim.g.seoul256_background = 233
 vim.opt.colorcolumn = "80"
+vim.wo.number = true
 
 vim.g.netrw_keepdir = 0
 vim.g.netrw_windsize = 30
 vim.g.netrw_banner = 0
 vim.g.netrw_list_hide = vim.fn['netrw_gitignore#Hide']()
 vim.g.netrw_localcopydircmd = 'cp -r'
+vim.g.netrw_bufsettings = 'noma nomod nu rnu nowrap ro nobl'
+

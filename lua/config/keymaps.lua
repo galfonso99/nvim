@@ -29,6 +29,7 @@ vim.keymap.set("i", "<c-k>", "<Esc><cmd>w<cr>", { silent = true, noremap = true 
 vim.keymap.set("n", "<leader>rn", ":lua require'genghis'.renameFile()<cr> ", { silent = true, noremap = true })
 
 vim.keymap.set("n", "<Leader>e", "<cmd>Ex<cr>", { silent = true, noremap = true })
+vim.keymap.set("n", "<Leader>o", "<cmd>Oil<cr>", { silent = true, noremap = true })
 vim.keymap.set("n", "<Leader>rl", "<cmd>LspRestart<cr>", { silent = true, noremap = true })
 vim.keymap.set("n", "<leader>fg", "<leader>sg", { remap = true })
 vim.keymap.set("n", "<leader>cp", ":lua require'telescope.builtin'.colorscheme{}<cr>")
