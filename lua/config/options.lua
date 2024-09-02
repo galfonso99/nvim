@@ -24,4 +24,8 @@ vim.g.netrw_banner = 0
 vim.g.netrw_list_hide = vim.fn['netrw_gitignore#Hide']()
 vim.g.netrw_localcopydircmd = 'cp -r'
 vim.g.netrw_bufsettings = 'noma nomod nu rnu nowrap ro nobl'
+vim.g.netrw_liststyle = 3 -- tree view style as default view
+vim.g.netrw_use_errorwindow = 0 -- popup window (2) doesn't work in nvim, use echoerr instead
+vim.g.netrw_sizestyle = 'h' -- human readable sizes like 5K or 3G instead of bytes
+vim.g.netrw_list_hide = vim.fn['netrw_gitignore#Hide']() .. [[.git/]] -- see `:help netrw-gitignore`
 

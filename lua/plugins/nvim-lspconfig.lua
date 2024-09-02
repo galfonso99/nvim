@@ -26,8 +26,8 @@ return {
                     },
                 }
                 end,
-        }
-    -- inlay_hints = {enabled = false}
+        },
+        inlay_hints = {enabled = false}
     },
 }
 --

@@ -1,38 +1,40 @@
--- vim.keymap.set("i", "jk", "<ESC>", { silent = true })
--- vim.keymap.set("i", "<C-n>", "<ESC>la", { silent = true, noremap = true })
--- vim.keymap.set("s", "<TAB>", vim.NIL, { silent = true, noremap = true })
-
-
 vim.keymap.set("n", "s", '"_s', { silent = true, noremap = true })
 vim.keymap.set("n", "x", '"_x', { silent = true, noremap = true })
 vim.keymap.set("n", "c", '"_c', { silent = true, noremap = true })
--- vim.keymap.del({"n", "i", "s"}, '<tab>')
 
 -- vim.keymap.set("n", "<leader>y", require("osc52").copy_operator, { expr = true })
 -- vim.keymap.set("n", "<leader>yy", "<leader>y_", { remap = true })
--- vim.keymap.set("v", "<leader>y", require("osc52").copy_visual)
-vim.keymap.set("v", "<leader>p", '"_dP')
+-- vim.keymap.set("x", "<leader>y", require("osc52").copy_visual)
+-- vim.keymap.set("i", "<C-n>", "<ESC>la", { silent = true, noremap = true })
+vim.keymap.set("x", "<leader>p", '"_dP')
 vim.keymap.set("n", "<leader>ip", '"_diwP')
 
-vim.keymap.set({ "n", "v" }, "<leader>d", '"_d')
-vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
-vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+vim.keymap.set({"n", "x"}, "<leader>d", '"_d')
+vim.keymap.set("x", "J", ":m '>+1<CR>gv=gv")
+vim.keymap.set("x", "K", ":m '<-2<CR>gv=gv")
 
 
-vim.keymap.set({ "i", "v" }, "<c-j>", "<Esc>", { silent = true, noremap = true })
--- vim.keymap.set("i", "jk", "<ESC>", { silent = true })
+-- vim.keymap.set("i", "jk", "<ESC>", { silent = true, noremap = true })
+-- vim.keymap.set("i", "kj", "<ESC>", { silent = true, noremap = true })
+-- vim.keymap.set({ "n"}, "<c-j>", "<Esc>", { silent = true, noremap = true })
+vim.keymap.set({ "n", "i", "x"}, "<c-j>", "<Esc>", { silent = true, noremap = true })
 -- vim.keymap.set("i", "<leader>j", "<ESC>", { silent = true })
 vim.keymap.set("n", "<c-k>", "<cmd>w<cr>", { silent = true, noremap = true })
 vim.keymap.set("i", "<c-k>", "<Esc><cmd>w<cr>", { silent = true, noremap = true })
+vim.keymap.set("t", "<c-j>", "<c-\\><c-n>", { silent = true, noremap = true })
 -- vim.keymap.set("n", "Q", "<c-v>", { silent = true, noremap = true })
 -- vim.keymap.set("n", "<Enter>", "o<ESC>", { silent = true })
 vim.keymap.set("n", "<leader>rn", ":lua require'genghis'.renameFile()<cr> ", { silent = true, noremap = true })
 
 vim.keymap.set("n", "<Leader>e", "<cmd>Ex<cr>", { silent = true, noremap = true })
 vim.keymap.set("n", "<Leader>o", "<cmd>Oil<cr>", { silent = true, noremap = true })
+vim.keymap.set("n", "<Leader>t", "<cmd>terminal<cr>", { silent = true, noremap = true })
 vim.keymap.set("n", "<Leader>rl", "<cmd>LspRestart<cr>", { silent = true, noremap = true })
 vim.keymap.set("n", "<leader>fg", "<leader>sg", { remap = true })
 vim.keymap.set("n", "<leader>cp", ":lua require'telescope.builtin'.colorscheme{}<cr>")
+vim.keymap.set("i", "<c-]>", "<cr>}<Esc>O")
+
+
 
 -- vim.keymap.set('v', '//', 'y/\\V<C-R>=escape(@",\'/\\\')<CR><CR>', {silent = true, noremap = true})
 
