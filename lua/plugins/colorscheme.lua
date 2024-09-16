@@ -47,7 +47,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "seoul256",
+      colorscheme = "slate",
     },
   },
 }
@@ -55,12 +55,11 @@ return {
 -- List of Themes I like (Order I want to use them)
     -- ayu
     -- kanagawa wave
+    -- srcery
     -- deus
     -- dracula
     -- Seoul256  Default
     -- retrobox
-    -- onedark
-    -- srcery
     -- tokyonight - moon
     -- slate
     -- gruvbox
@@ -70,6 +69,7 @@ return {
     -- duskfox
     -- terafox
     -- nightfox
+    -- onedark
     --
     -- zaibatsu
     -- wildcharm

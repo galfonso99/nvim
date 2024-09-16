@@ -7,7 +7,7 @@ vim.keymap.set("n", "c", '"_c', { silent = true, noremap = true })
 -- vim.keymap.set("x", "<leader>y", require("osc52").copy_visual)
 -- vim.keymap.set("i", "<C-n>", "<ESC>la", { silent = true, noremap = true })
 vim.keymap.set("x", "<leader>p", '"_dP')
-vim.keymap.set("n", "<leader>ip", '"_diwP')
+vim.keymap.set("n", "<leader>ip", '"_diwp')
 
 vim.keymap.set({"n", "x"}, "<leader>d", '"_d')
 vim.keymap.set("x", "J", ":m '>+1<CR>gv=gv")
@@ -24,14 +24,16 @@ vim.keymap.set("i", "<c-k>", "<Esc><cmd>w<cr>", { silent = true, noremap = true 
 vim.keymap.set("t", "<c-j>", "<c-\\><c-n>", { silent = true, noremap = true })
 -- vim.keymap.set("n", "Q", "<c-v>", { silent = true, noremap = true })
 -- vim.keymap.set("n", "<Enter>", "o<ESC>", { silent = true })
-vim.keymap.set("n", "<leader>rn", ":lua require'genghis'.renameFile()<cr> ", { silent = true, noremap = true })
+vim.keymap.set("n", "<leader>rn", "<cmd>Genghis renameFile<cr>", { silent = true, noremap = true })
+vim.keymap.set("n", "<leader>df", "<cmd>Genghis duplicateFile<cr>", { silent = true, noremap = true })
+vim.keymap.set("n", "<leader>cs", "<leader>uC", { silent = true })
 
 vim.keymap.set("n", "<Leader>e", "<cmd>Ex<cr>", { silent = true, noremap = true })
 vim.keymap.set("n", "<Leader>o", "<cmd>Oil<cr>", { silent = true, noremap = true })
 vim.keymap.set("n", "<Leader>t", "<cmd>terminal<cr>", { silent = true, noremap = true })
 vim.keymap.set("n", "<Leader>rl", "<cmd>LspRestart<cr>", { silent = true, noremap = true })
 vim.keymap.set("n", "<leader>fg", "<leader>sg", { remap = true })
-vim.keymap.set("n", "<leader>cp", ":lua require'telescope.builtin'.colorscheme{}<cr>")
+vim.keymap.set("n", "<leader>cp", ":lua require'telescope.builtin'.colorscheme{enable_preview=true}<cr>")
 vim.keymap.set("i", "<c-]>", "<cr>}<Esc>O")
 
 
