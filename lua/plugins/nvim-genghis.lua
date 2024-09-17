@@ -5,5 +5,3 @@ return {
         require("genghis").setup(opts)
     end,
 }
-
-
