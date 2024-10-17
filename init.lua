@@ -14,7 +14,7 @@ end ---@diagnostic disable-next-line: undefined-field
 vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup({
-  'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically
+  -- 'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically
   { -- Adds git related signs to the gutter, as well as utilities for managing changes
     'lewis6991/gitsigns.nvim',
     opts = {
@@ -84,7 +84,7 @@ require('lazy').setup({
     },
   },
 })
-vim.cmd.colorscheme 'slate'
+-- vim.cmd.colorscheme 'slate'
 -- List of Themes I like (Order I want to use them)
     -- ayu
     -- kanagawa wave

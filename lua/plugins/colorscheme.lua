@@ -13,23 +13,22 @@ return {
   { 'EdenEast/nightfox.nvim' },
   { 'rebelot/kanagawa.nvim' },
   { 'junegunn/seoul256.vim' },
+  { 'Mofiqul/dracula.nvim', opts = { colors = { bg = '#050211', }, } },
   {
     'rose-pine/neovim',
     name = 'rose-pine',
     config = function()
-      require('rose-pine').setup { disable_background = true }
+      -- require('rose-pine').setup { disable_background = true }
     end,
-  },
-  { 'Mofiqul/dracula.nvim', opts = {
-      colors = {
-        bg = '#050211',
-      },
-    }
   },
   {
     'folke/tokyonight.nvim',
     lazy = false,
     priority = 1000,
+    init = function()
+      -- NOTE: Here is where I set my default colorscheme
+      vim.cmd.colorscheme 'rose-pine-main'
+    end,
     opts = {},
   },
 }
@@ -38,19 +37,19 @@ return {
     -- kanagawa wave
     -- srcery
     -- deus
+    -- OceanicNext
     -- dracula
     -- Seoul256  Default
     -- retrobox
     -- tokyonight - moon
     -- slate
     -- gruvbox
-    -- OceanicNext
-    -- rose-pine moon
-    -- rose-pine main
+    -- rose-pine moon 
     -- duskfox
     -- terafox
-    -- nightfox
+    -- nightfox  <-
     -- onedark
+    -- rose-pine-main
     --
     -- zaibatsu
     -- wildcharm

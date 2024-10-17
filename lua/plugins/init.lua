@@ -11,10 +11,10 @@
 -- require 'plugins.gitsigns' -- adds gitsigns recommend keymaps
 return {
     'tpope/vim-vinegar',
-    'lukas-reineke/indent-blankline.nvim',
+    -- 'lukas-reineke/indent-blankline.nvim',
     'nvim-lualine/lualine.nvim',
     'prichrd/netrw.nvim',
-    -- 'tpope/vim-eunuch',
+    'tpope/vim-eunuch',
     'garymjr/nvim-snippets',
     'nvim-treesitter/nvim-treesitter-textobjects',
     'windwp/nvim-ts-autotag',

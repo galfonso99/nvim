@@ -28,6 +28,7 @@
       vim.keymap.set('n', '<leader>sh', builtin.help_tags, { desc = '[S]earch [H]elp' })
       vim.keymap.set('n', '<leader>sk', builtin.keymaps, { desc = '[S]earch [K]eymaps' })
       vim.keymap.set('n', '<leader>pf', builtin.find_files, { desc = '[P]roject [F]iles Search' })
+      vim.keymap.set('n', '<leader>sf', builtin.git_files, { desc = '[P]roject [F]iles Search' })
       vim.keymap.set('n', '<leader>pv', '<cmd>Ex<CR>', { desc = '[P]roject [V]iew via NetRW' })
       vim.keymap.set('n', '<leader>ss', builtin.builtin, { desc = '[S]earch [S]elect Telescope' })
       vim.keymap.set('n', '<leader>sw', builtin.grep_string, { desc = '[S]earch current [W]ord' })
@@ -53,5 +54,18 @@
         builtin.find_files { cwd = vim.fn.stdpath 'config' }
       end, { desc = '[S]earch [N]eovim files' })
     end,
-  }
+   -- opts = function()
+   --   local actions = require("telescope.actions")
+   --   return {
+   --     default = {
+   --       mappings = {
+   --         i = {
+   --           ["<C-e>"] = { "<esc>", type = "command" },
+   --           ['<esc>'] = actions.close
+   --         },
+   --       }
+   --     }
+   --   }
+   -- end
+ }
 
