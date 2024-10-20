@@ -2,7 +2,7 @@ vim.g.have_nerd_font = true
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.list = true
-vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣', lead = '.' }
+vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 vim.opt.mouse = 'a'
 vim.opt.showmode = false
 vim.schedule(function()
@@ -24,8 +24,8 @@ vim.opt.wrap = false
 vim.o.guicursor = 'n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50'
 -- ,a:blinkwait700-blinkoff800-blinkon850-Cursor/lCursor,sm:block-blinkwait175-blinkoff150-blinkon175
 vim.g.autoformat = false
--- vim.o.tabstop = 4
--- vim.o.shiftwidth = 4
+vim.o.tabstop = 4
+vim.o.shiftwidth = 4
 -- vim.o.expandtab=false
 vim.o.termguicolors = true
 vim.opt.colorcolumn = '80'
