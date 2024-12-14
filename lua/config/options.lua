@@ -1,7 +1,7 @@
 vim.g.have_nerd_font = true
 vim.opt.number = true
 vim.opt.relativenumber = true
-vim.opt.list = true
+-- vim.opt.list = true
 vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 vim.opt.mouse = 'a'
 vim.opt.showmode = false
@@ -20,7 +20,9 @@ vim.opt.splitbelow = true
 vim.opt.inccommand = 'split'
 vim.opt.cursorline = true
 vim.opt.scrolloff = 10
-vim.opt.wrap = false
+vim.opt.wrap = true
+vim.o.linebreak = true
+vim.opt_local_columns = 160
 vim.o.guicursor = 'n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50'
 -- ,a:blinkwait700-blinkoff800-blinkon850-Cursor/lCursor,sm:block-blinkwait175-blinkoff150-blinkon175
 vim.g.autoformat = false

@@ -6,10 +6,13 @@ vim.keymap.set('n', 's', '"_s', { silent = true, noremap = true }) -- Don't copy
 vim.keymap.set('n', 'x', '"_x', { silent = true, noremap = true }) -- Don't copy cut letter
 vim.keymap.set('n', 'c', '"_c', { silent = true, noremap = true }) -- Don't copy cut text
 vim.keymap.set('x', '<leader>p', '"_dP') -- Replace text without copying the deleted text
-vim.keymap.set('n', '<leader>ip', '"_diwp') -- replace word without saving deleted word
+vim.keymap.set('x', 'p', '"_dP') -- Replace text without copying the deleted text
+-- vim.keymap.set('n', '<leader>ip', '"_diwp') -- replace word without saving deleted word
 vim.keymap.set({ 'n', 'x' }, '<leader>d', '"_d') -- Delete without saving deleted text
 vim.keymap.set('x', 'J', ":m '>+1<CR>gv=gv") -- Move selected block down
 vim.keymap.set('x', 'K', ":m '<-2<CR>gv=gv") -- Move selected block up
+vim.keymap.set('x', "<", "<gv") 			 -- Move block left and reselect
+vim.keymap.set('x', ">", ">gv") 			 -- Move block left and reselect
 vim.keymap.set('n', '<Leader>e', '<cmd>Ex<cr>', { silent = true, noremap = true })
 vim.keymap.set('n', '<Leader>o', '<cmd>Oil<cr>', { silent = true, noremap = true })
 vim.keymap.set('n', '<Leader>t', '<cmd>terminal<cr>', { silent = true, noremap = true })
@@ -17,12 +20,18 @@ vim.keymap.set('n', '<Leader>lr', '<cmd>LspRestart<cr>', { silent = true, norema
 vim.keymap.set('n', '<Leader>lo', '<cmd>LspStart<cr>', { silent = true, noremap = true }) -- [L]sp [O]pen
 vim.keymap.set('n', '<Leader>ls', '<cmd>LspStop<cr>', { silent = true, noremap = true })
 vim.keymap.set('n', '<leader>sc', ":lua require'telescope.builtin'.colorscheme{enable_preview=true}<cr>")
+vim.keymap.set('ca', 'w', "up")
+vim.keymap.set('ca', 'wq', "up | q")
+vim.keymap.set('ca', 'w!', "up!")
 vim.keymap.set('i', '<c-]>', '<cr>}<Esc>O')
+vim.keymap.set('x', '<c-]>', '0f{%', { silent = true, noremap = true })
+vim.keymap.set('x', '[', '<ESC>a]<ESC>`<i[<ESC>')
 vim.keymap.set('n', '<leader>lz', '<cmd>Lazy<cr>')
 vim.keymap.set('n', '<leader>rf', '<cmd>Genghis renameFile<cr>')
-vim.keymap.set('n', '<leader>df', '<cmd>Genghis duplicateFile<cr>')
+vim.keymap.set('n', '<leader>df', '<cmd>Genghis duplicateFile<cr>', { silent = true, noremap = true })
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
+vim.keymap.set('n', '<leader>i', 'mpyyp`pj', { desc = 'Duplicate Line Down' })
 -- Increment all the numbers in current line by 1
 vim.keymap.set({'n'}, '<leader>a', '<cmd>s/\\d\\+/\\=submatch(0)+1/g<cr>')
 vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
