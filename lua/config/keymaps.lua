@@ -13,16 +13,12 @@ vim.keymap.set('x', 'J', ":m '>+1<CR>gv=gv") -- Move selected block down
 vim.keymap.set('x', 'K', ":m '<-2<CR>gv=gv") -- Move selected block up
 vim.keymap.set('x', "<", "<gv") 			 -- Move block left and reselect
 vim.keymap.set('x', ">", ">gv") 			 -- Move block left and reselect
-vim.keymap.set('n', '<Leader>e', '<cmd>Ex<cr>', { silent = true, noremap = true })
-vim.keymap.set('n', '<Leader>o', '<cmd>Oil<cr>', { silent = true, noremap = true })
+vim.keymap.set('n', '<Leader>e', '<cmd>Oil<cr>', { silent = true, noremap = true })
 vim.keymap.set('n', '<Leader>t', '<cmd>terminal<cr>', { silent = true, noremap = true })
 vim.keymap.set('n', '<Leader>lr', '<cmd>LspRestart<cr>', { silent = true, noremap = true })
 vim.keymap.set('n', '<Leader>lo', '<cmd>LspStart<cr>', { silent = true, noremap = true }) -- [L]sp [O]pen
 vim.keymap.set('n', '<Leader>ls', '<cmd>LspStop<cr>', { silent = true, noremap = true })
 vim.keymap.set('n', '<leader>sc', ":lua require'telescope.builtin'.colorscheme{enable_preview=true}<cr>")
-vim.keymap.set('ca', 'w', "up")
-vim.keymap.set('ca', 'wq', "up | q")
-vim.keymap.set('ca', 'w!', "up!")
 vim.keymap.set('i', '<c-]>', '<cr>}<Esc>O')
 vim.keymap.set('x', '<c-]>', '0f{%', { silent = true, noremap = true })
 vim.keymap.set('x', '[', '<ESC>a]<ESC>`<i[<ESC>')
@@ -40,3 +36,8 @@ vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right win
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
+-- vim.keymap.set('ca', 'w', "up")
+-- vim.keymap.set('ca', 'wq', "up | q")
+-- vim.keymap.set('ca', 'w!', "up!")
+
+-- vim.keymap.set('n', '<Leader>e', '<cmd>Ex<cr>', { silent = true, noremap = true })

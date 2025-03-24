@@ -27,7 +27,7 @@ return {
     priority = 1000,
     init = function()
       -- NOTE: Here is where I set my default colorscheme
-      vim.cmd.colorscheme 'kanagawa'
+      vim.cmd.colorscheme 'rose-pine-moon'
     end,
     opts = {},
   },
@@ -41,14 +41,10 @@ return {
     -- slate
     -- gruvbox  9/10
     -- rose-pine moon 10/10
-	-- NOTE: SKIP: Until next Note
-
     -- srcery
     -- deus    
     -- OceanicNext 8/10    
-	-- NOTE: CONTINUE HERE
-
-    -- duskfox
+    -- duskfox  <----- Continue HERE
     -- terafox
     -- nightfox  
     -- dracula 7.5/10
