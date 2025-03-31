@@ -1,7 +1,7 @@
 return {
   { 'catppuccin/nvim' },
   { 'ellisonleao/gruvbox.nvim' },
-  { 'joshdick/onedark.vim' },
+  -- { 'joshdick/onedark.vim' },
   { 'mhartington/oceanic-next' }, -- OceanicNext --
   { 'fcpg/vim-fahrenheit' },
   { 'theniceboy/nvim-deus' },
@@ -13,6 +13,7 @@ return {
   { 'EdenEast/nightfox.nvim' },
   { 'rebelot/kanagawa.nvim' },
   { 'junegunn/seoul256.vim' },
+  { 'olimorris/onedarkpro.nvim' },
   { 'Mofiqul/dracula.nvim', opts = { colors = { bg = '#050211', }, } },
   {
     'rose-pine/neovim',
