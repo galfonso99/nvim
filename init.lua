@@ -64,6 +64,7 @@ require('lazy').setup({
       indent = { enable = true, disable = { 'ruby' } },
     },
   },
+  { "tpope/vim-fugitive", },
   { import = 'plugins' },
 }, {
   ui = {
